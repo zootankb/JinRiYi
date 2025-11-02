@@ -1,0 +1,7 @@
+from enum import Enum
+
+CODE_GET_VERIFICATION_CODE = 1           # 随机码获取
+CODE_CHECK_VERIFICATION_CODE = 2           # 检查随机码获取
+CODE_USE_VERIFICATION_CODE_HAS_USED = 3         # 已经被用了
+CODE_USE_VERIFICATION_CODE_EXPIRED = 4          # 已经过期了
+CODE_USE_VERIFICATION_CODE_NOT_EXISTED = 5      # 验证码不存在
