@@ -8,10 +8,15 @@ from django.views.decorators.csrf import csrf_exempt
 from datatool import error_code, data_util
 from datatool.enum_protocol_id import *
 from datatool.error_code import ERROR_ENUM, VERIFICATION_NO_CODE
-from feedback.models import ShopUserInfo, VerificationCode, Product, Feedback
+from feedback.models import CustomerInfo, VerificationCode, Product, Feedback
 
 
 # Create your views here.
+
+
+@require_GET
+def index(request):
+    return HttpResponse("测试接口，能获取到即表示可正常运行")
 
 
 @csrf_exempt
@@ -38,8 +43,8 @@ def start_feedback(request):
         product = Product.objects.get(pk=proj_id)
 
         user = None
-        if ShopUserInfo.objects.count() == 0:
-            user = ShopUserInfo()
+        if CustomerInfo.objects.count() == 0:
+            user = CustomerInfo()
             user.nick_name = nick_name
             user.from_platform = from_platform
             user.gender = gender
@@ -50,7 +55,7 @@ def start_feedback(request):
             user.avatar_url = avatar_url
             user.save()
         else:
-            user = ShopUserInfo.objects.get(nick_name=nick_name)
+            user = CustomerInfo.objects.get(nick_name=nick_name)
 
         feedback = Feedback.objects.create()
         feedback.product = product

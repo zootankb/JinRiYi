@@ -7,6 +7,7 @@ app_name = 'photoWeb'
 
 
 urlpatterns = [
+    path('', index, name='index'),
     path('start_feedback/', start_feedback, name='start_feedback'),
     path('get_verification_code/', get_verification_code, name='get_verification_code'),
     path('check_verification_valid/', check_verification_valid, name='check_verification_valid'),

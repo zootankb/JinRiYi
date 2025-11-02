@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-w3pu36%!s-9$%yvmm#)zg8lkum2-m1h2z$=rx!%7soo7o$mrn2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.1.2']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -116,12 +116,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'media'),
-]
+STATIC_URL = '/static/' # 能够访问静态文件的URL路径
+STATIC_ROOT = os.path.join(BASE_DIR,'static') 
+
+
 
 # 设置静态文件路径为主目录下的media文件夹
 MEDIA_ROOT = os.path.join(BASE_DIR, "media").replace('\\', '/')    #media即为媒体文件上传的根路径
