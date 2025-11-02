@@ -1,0 +1,51 @@
+﻿<Window x:Class="JinRiYi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JinRiYi"
+        mc:Ignorable="d"
+        Title="主窗口" Height="450" Width="1000">
+    <Grid>
+        <DockPanel>
+            <DockPanel DockPanel.Dock="Top" Background="Green">
+                <Button x:Name="BtnLineWindow" Content="概览图"  Width="100" Height="40" HorizontalAlignment="Left" Click="BtnLineWindow_Click"/>
+                <Button x:Name="BtnProjSetting" Content="项目设置" Width="100" Height="40" HorizontalAlignment="Left" Click="BtnProjSetting_Click"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Bottom" Background="Red">
+                <Grid Width="230" HorizontalAlignment="Left" VerticalAlignment="Stretch" Background="Pink">
+                    <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
+                        <RadioButton Content="消费次数" IsChecked="True"/>
+                        <RadioButton Content="消费金额"/>
+                        <RadioButton Content="剩余金额"/>
+                    </StackPanel>
+                    <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" x:Name="LstbUser" Margin="0,30,0,0" Background="Gray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                </Grid>
+                <Grid>
+                    <Label Content="顾客名字" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="20,10,0,0" VerticalAlignment="Top" Height="34" Width="71"/>
+                    <Label Content="剩余金额" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="96,10,0,0" VerticalAlignment="Top" Height="34" Width="71"/>
+                    <Button Content="添加消费记录" HorizontalAlignment="Right" Margin="0,10,463,0" VerticalAlignment="Top" Height="34" Width="80"/>
+                    <Button x:Name="BtnRecharge" Content="充值记录" HorizontalAlignment="Right" Margin="0,10,363,0" VerticalAlignment="Top" Height="34" Width="71" Click="BtnRecharge_Click"/>
+                    <Button x:Name="BtnUserDetail" Content="用户详情" HorizontalAlignment="Right" Margin="0,10,283,0" VerticalAlignment="Top" Height="34" Width="71" Click="BtnUserDetail_Click"/>
+                    <Button x:Name="BtnExportExcel" Content="导出为Excel" HorizontalAlignment="Right" Margin="0,10,185,0" VerticalAlignment="Top" Height="34" Width="71" Click="BtnExportExcel_Click"/>
+                    <Button x:Name="BtnRemind" Content="消费剩余金额提醒内容" HorizontalAlignment="Right" Margin="0,10,21,0" VerticalAlignment="Top" Height="34" Width="150" Click="BtnRemind_Click"/>
+
+
+                    <DataGrid Margin="0,60,0,0" x:Name="DgdUser" IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="时间"></DataGridTextColumn>
+                            <DataGridTextColumn Header="消费项目"></DataGridTextColumn>
+                            <DataGridTextColumn Header="原价"></DataGridTextColumn>
+                            <DataGridTextColumn Header="折扣"></DataGridTextColumn>
+                            <DataGridTextColumn Header="折后价"></DataGridTextColumn>
+                            <DataGridTextColumn Header="剩余金额"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+
+            </DockPanel>
+        </DockPanel>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\jinriyi\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|solutionrelative:jinriyi\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|e:\\projects\\csharpwpf\\jinriyi\\projsys\\jinriyi\\page\\rechargewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|solutionrelative:jinriyi\\page\\rechargewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|e:\\projects\\csharpwpf\\jinriyi\\projsys\\jinriyi\\page\\rechargewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|solutionrelative:jinriyi\\page\\rechargewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\jinriyi\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|solutionrelative:jinriyi\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|e:\\projects\\csharpwpf\\jinriyi\\projsys\\jinriyi\\page\\projwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|solutionrelative:jinriyi\\page\\projwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|e:\\projects\\csharpwpf\\jinriyi\\projsys\\jinriyi\\page\\projwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|solutionrelative:jinriyi\\page\\projwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\jinriyi\\page\\linewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|solutionrelative:jinriyi\\page\\linewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\jinriyi\\page\\linewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9AC78235-0ADD-4AB5-B52F-0BA23586563A}|JinRiYi\\JinRiYi.csproj|solutionrelative:jinriyi\\page\\linewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Page\\RechargeWindow.xaml.cs",
+              "DocumentMoniker": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\Page\\RechargeWindow.xaml.cs",
+              "RelativeDocumentMoniker": "JinRiYi\\Page\\RechargeWindow.xaml.cs",
+              "ToolTip": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\Page\\RechargeWindow.xaml.cs",
+              "RelativeToolTip": "JinRiYi\\Page\\RechargeWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T06:43:48.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProjWindow.xaml.cs",
+              "DocumentMoniker": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\Page\\ProjWindow.xaml.cs",
+              "RelativeDocumentMoniker": "JinRiYi\\Page\\ProjWindow.xaml.cs",
+              "ToolTip": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\Page\\ProjWindow.xaml.cs",
+              "RelativeToolTip": "JinRiYi\\Page\\ProjWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T05:39:18.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProjWindow.xaml",
+              "DocumentMoniker": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\Page\\ProjWindow.xaml",
+              "RelativeDocumentMoniker": "JinRiYi\\Page\\ProjWindow.xaml",
+              "ToolTip": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\Page\\ProjWindow.xaml",
+              "RelativeToolTip": "JinRiYi\\Page\\ProjWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-09T05:20:43.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RechargeWindow.xaml",
+              "DocumentMoniker": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\Page\\RechargeWindow.xaml",
+              "RelativeDocumentMoniker": "JinRiYi\\Page\\RechargeWindow.xaml",
+              "ToolTip": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\Page\\RechargeWindow.xaml",
+              "RelativeToolTip": "JinRiYi\\Page\\RechargeWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-09T05:11:19.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LineWindow.xaml.cs",
+              "DocumentMoniker": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\Page\\LineWindow.xaml.cs",
+              "RelativeDocumentMoniker": "JinRiYi\\Page\\LineWindow.xaml.cs",
+              "ToolTip": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\Page\\LineWindow.xaml.cs",
+              "RelativeToolTip": "JinRiYi\\Page\\LineWindow.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T05:11:19.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LineWindow.xaml",
+              "DocumentMoniker": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\Page\\LineWindow.xaml",
+              "RelativeDocumentMoniker": "JinRiYi\\Page\\LineWindow.xaml",
+              "ToolTip": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\Page\\LineWindow.xaml",
+              "RelativeToolTip": "JinRiYi\\Page\\LineWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-09T05:11:19.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "JinRiYi\\MainWindow.xaml",
+              "ToolTip": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\MainWindow.xaml",
+              "RelativeToolTip": "JinRiYi\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-09T05:17:25.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "JinRiYi\\MainWindow.xaml.cs",
+              "ToolTip": "E:\\Projects\\CSharpWPF\\JinRiYi\\ProjSys\\JinRiYi\\MainWindow.xaml.cs",
+              "RelativeToolTip": "JinRiYi\\MainWindow.xaml.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAD4v1sAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T05:11:20.439Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
