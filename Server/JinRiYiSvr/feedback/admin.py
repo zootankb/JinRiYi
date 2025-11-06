@@ -86,34 +86,34 @@ class OrderInfoAdmin(admin.ModelAdmin):
 
 @admin.register(ConsumptionRecord)
 class ConsumptionRecordAdmin(admin.ModelAdmin):
-    list_display = ['id', 'real_customer', 'order1', 'order2', 'order3', 'order4', 'order5',
-                     'order_time_1_start', 'order_time_1_end', 'order_time_2_start', 'order_time_2_end',
-                     'order_time_3_start', 'order_time_3_end', 'order_time_4_start', 'order_time_4_end',
-                     'order_time_5_start', 'order_time_5_end',
-                     'consumption_1_type', 'consumption_2_type', 'consumption_3_type', 'consumption_4_type', 'consumption_5_type',
-                     'order_1_master', 'order_2_master', 'order_3_master', 'order_4_master', 'order_5_master',
+    list_display = ['id', 'real_customer',
+                    'order1', 'order_1_master', 'order_time_1_start', 'order_time_1_end', 'consumption_1_type',
+                    'order2', 'order_2_master', 'order_time_2_start', 'order_time_2_end', 'consumption_2_type',
+                    'order3', 'order_3_master', 'order_time_3_start', 'order_time_3_end', 'consumption_3_type',
+                    'order4', 'order_4_master', 'order_time_4_start', 'order_time_4_end', 'consumption_4_type',
+                    'order5', 'order_5_master', 'order_time_5_start', 'order_time_5_end', 'consumption_5_type',
                      'mark', 'created_at', 'updated_at']
-    search_fields = ['id', 'real_customer', 'order1', 'order2', 'order3', 'order4', 'order5',
-                     'order_time_1_start', 'order_time_1_end', 'order_time_2_start', 'order_time_2_end',
-                     'order_time_3_start', 'order_time_3_end', 'order_time_4_start', 'order_time_4_end',
-                     'order_time_5_start', 'order_time_5_end',
-                     'consumption_1_type', 'consumption_2_type', 'consumption_3_type', 'consumption_4_type', 'consumption_5_type',
-                     'order_1_master', 'order_2_master', 'order_3_master', 'order_4_master', 'order_5_master',
+    search_fields = ['id', 'real_customer',
+                    'order1', 'order_1_master', 'order_time_1_start', 'order_time_1_end', 'consumption_1_type',
+                    'order2', 'order_2_master', 'order_time_2_start', 'order_time_2_end', 'consumption_2_type',
+                    'order3', 'order_3_master', 'order_time_3_start', 'order_time_3_end', 'consumption_3_type',
+                    'order4', 'order_4_master', 'order_time_4_start', 'order_time_4_end', 'consumption_4_type',
+                    'order5', 'order_5_master', 'order_time_5_start', 'order_time_5_end', 'consumption_5_type',
                      'mark', 'created_at', 'updated_at']
-    list_filter = ['id', 'real_customer', 'order1', 'order2', 'order3', 'order4', 'order5',
-                     'order_time_1_start', 'order_time_1_end', 'order_time_2_start', 'order_time_2_end',
-                     'order_time_3_start', 'order_time_3_end', 'order_time_4_start', 'order_time_4_end',
-                     'order_time_5_start', 'order_time_5_end',
-                     'consumption_1_type', 'consumption_2_type', 'consumption_3_type', 'consumption_4_type', 'consumption_5_type',
-                     'order_1_master', 'order_2_master', 'order_3_master', 'order_4_master', 'order_5_master',
+    list_filter = ['id', 'real_customer',
+                    'order1', 'order_1_master', 'order_time_1_start', 'order_time_1_end', 'consumption_1_type',
+                    'order2', 'order_2_master', 'order_time_2_start', 'order_time_2_end', 'consumption_2_type',
+                    'order3', 'order_3_master', 'order_time_3_start', 'order_time_3_end', 'consumption_3_type',
+                    'order4', 'order_4_master', 'order_time_4_start', 'order_time_4_end', 'consumption_4_type',
+                    'order5', 'order_5_master', 'order_time_5_start', 'order_time_5_end', 'consumption_5_type',
                      'mark', 'created_at', 'updated_at']
     ordering = ['-id', ]
-    fields = ['id', 'real_customer', 'order1', 'order2', 'order3', 'order4', 'order5',
-                     'order_time_1_start', 'order_time_1_end', 'order_time_2_start', 'order_time_2_end',
-                     'order_time_3_start', 'order_time_3_end', 'order_time_4_start', 'order_time_4_end',
-                     'order_time_5_start', 'order_time_5_end',
-                     'consumption_1_type', 'consumption_2_type', 'consumption_3_type', 'consumption_4_type', 'consumption_5_type',
-                     'order_1_master', 'order_2_master', 'order_3_master', 'order_4_master', 'order_5_master',
+    fields = ['id', 'real_customer',
+                    'order1', 'order_1_master', 'order_time_1_start', 'order_time_1_end', 'consumption_1_type',
+                    'order2', 'order_2_master', 'order_time_2_start', 'order_time_2_end', 'consumption_2_type',
+                    'order3', 'order_3_master', 'order_time_3_start', 'order_time_3_end', 'consumption_3_type',
+                    'order4', 'order_4_master', 'order_time_4_start', 'order_time_4_end', 'consumption_4_type',
+                    'order5', 'order_5_master', 'order_time_5_start', 'order_time_5_end', 'consumption_5_type',
                      'mark', 'created_at', 'updated_at']
     readonly_fields = ['id', 'created_at', 'updated_at',]
 

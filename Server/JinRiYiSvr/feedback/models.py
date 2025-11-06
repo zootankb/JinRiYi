@@ -104,14 +104,14 @@ class VerificationCode(models.Model):
 
 class Feedback(models.Model):
     id = models.AutoField("ID", primary_key=True)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True)
-    user = models.ForeignKey(CustomerInfo, on_delete=models.CASCADE, null=True)
+    product = models.ForeignKey(Product, verbose_name='项目', on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(CustomerInfo, verbose_name='顾客', on_delete=models.CASCADE, null=True)
     master_name = models.CharField("师傅名字", max_length=40, blank=True)
     service_progress = models.PositiveSmallIntegerField("服务流程", choices=StartLevel, default=StartLevel.very_good)
     master_technique = models.PositiveSmallIntegerField("技师手法", choices=StartLevel, default=StartLevel.very_good)
     environment = models.PositiveSmallIntegerField("环境卫生", choices=StartLevel, default=StartLevel.very_good)
     content = models.TextField("反馈内容", max_length=500)
-    verification_code = models.ForeignKey(VerificationCode, on_delete=models.CASCADE, null=True)
+    verification_code = models.ForeignKey(VerificationCode, verbose_name='验证码', on_delete=models.CASCADE, null=True)
     mark = models.TextField("备注", max_length=400, default="这个人很懒，什么都没有留下")
     created_at = models.DateTimeField("添加日期", auto_now_add=True)
     updated_at = models.DateTimeField("更新日期", auto_now=datetime.datetime.now)
@@ -127,8 +127,8 @@ class Feedback(models.Model):
 
 class OrderInfo(models.Model):
     id = models.AutoField("ID", primary_key=True)
-    customer = models.ForeignKey(CustomerInfo, on_delete=models.CASCADE, null=True)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True)
+    customer = models.ForeignKey(CustomerInfo, verbose_name='顾客',on_delete=models.CASCADE, null=True)
+    product = models.ForeignKey(Product, verbose_name='项目',on_delete=models.CASCADE, null=True)
     from_platform = models.PositiveSmallIntegerField("来源", choices=PlatformChoice, default=PlatformChoice.unknown)
     received_money = models.FloatField("实收金额", default=0)
     received_count = models.IntegerField("总次数", default=0)
@@ -148,12 +148,12 @@ class OrderInfo(models.Model):
 
 class ConsumptionRecord(models.Model):
     id = models.AutoField("ID", primary_key=True)
-    real_customer = models.ForeignKey(CustomerInfo, on_delete=models.CASCADE, null=True)
-    order1 = models.ForeignKey(OrderInfo, on_delete=models.CASCADE, null=True, related_name='consumption_2_order_field1')
-    order2 = models.ForeignKey(OrderInfo, on_delete=models.CASCADE, null=True, related_name='consumption_2_order_field2')
-    order3 = models.ForeignKey(OrderInfo, on_delete=models.CASCADE, null=True, related_name='consumption_2_order_field3')
-    order4 = models.ForeignKey(OrderInfo, on_delete=models.CASCADE, null=True, related_name='consumption_2_order_field4')
-    order5 = models.ForeignKey(OrderInfo, on_delete=models.CASCADE, null=True, related_name='consumption_2_order_field5')
+    real_customer = models.ForeignKey(CustomerInfo, verbose_name='顾客', on_delete=models.CASCADE, null=True)
+    order1 = models.ForeignKey(OrderInfo, verbose_name='订单1', on_delete=models.CASCADE, blank=True, null=True, related_name='consumption_2_order_field1')
+    order2 = models.ForeignKey(OrderInfo, verbose_name='订单2', on_delete=models.CASCADE, blank=True, null=True, related_name='consumption_2_order_field2')
+    order3 = models.ForeignKey(OrderInfo, verbose_name='订单3', on_delete=models.CASCADE, blank=True, null=True, related_name='consumption_2_order_field3')
+    order4 = models.ForeignKey(OrderInfo, verbose_name='订单4', on_delete=models.CASCADE, blank=True, null=True, related_name='consumption_2_order_field4')
+    order5 = models.ForeignKey(OrderInfo, verbose_name='订单5', on_delete=models.CASCADE, blank=True, null=True, related_name='consumption_2_order_field5')
     order_time_1_start = models.DateTimeField("第1个项目开始时间", default=datetime.datetime.now(), blank=True)
     order_time_1_end = models.DateTimeField("第1个项目结束时间", default=datetime.datetime.now(), blank=True)
     order_time_2_start = models.DateTimeField("第2个项目开始时间", default=datetime.datetime.now(), blank=True)
@@ -164,22 +164,22 @@ class ConsumptionRecord(models.Model):
     order_time_4_end = models.DateTimeField("第4个项目结束时间", default=datetime.datetime.now(), blank=True)
     order_time_5_start = models.DateTimeField("第5个项目开始时间", default=datetime.datetime.now(), blank=True)
     order_time_5_end = models.DateTimeField("第5个项目结束时间", default=datetime.datetime.now(), blank=True)
-    consumption_1_type = models.PositiveSmallIntegerField("第1个项目消费类型", choices=UseType, default=UseType.once_money)
-    consumption_2_type = models.PositiveSmallIntegerField("第2个项目消费类型", choices=UseType, default=UseType.once_money)
-    consumption_3_type = models.PositiveSmallIntegerField("第3个项目消费类型", choices=UseType, default=UseType.once_money)
-    consumption_4_type = models.PositiveSmallIntegerField("第4个项目消费类型", choices=UseType, default=UseType.once_money)
-    consumption_5_type = models.PositiveSmallIntegerField("第5个项目消费类型", choices=UseType, default=UseType.once_money)
-    order_1_master = models.ForeignKey(MasterInfo, on_delete=models.CASCADE, null=True, related_name='consumption_2_master_field1')
-    order_2_master = models.ForeignKey(MasterInfo, on_delete=models.CASCADE, null=True, related_name='consumption_2_master_field2')
-    order_3_master = models.ForeignKey(MasterInfo, on_delete=models.CASCADE, null=True, related_name='consumption_2_master_field3')
-    order_4_master = models.ForeignKey(MasterInfo, on_delete=models.CASCADE, null=True, related_name='consumption_2_master_field4')
-    order_5_master = models.ForeignKey(MasterInfo, on_delete=models.CASCADE, null=True, related_name='consumption_2_master_field5')
+    consumption_1_type = models.PositiveSmallIntegerField("订单1消费类型", choices=UseType, default=UseType.once_money)
+    consumption_2_type = models.PositiveSmallIntegerField("订单2消费类型", choices=UseType, default=UseType.once_money)
+    consumption_3_type = models.PositiveSmallIntegerField("订单3消费类型", choices=UseType, default=UseType.once_money)
+    consumption_4_type = models.PositiveSmallIntegerField("订单4消费类型", choices=UseType, default=UseType.once_money)
+    consumption_5_type = models.PositiveSmallIntegerField("订单5消费类型", choices=UseType, default=UseType.once_money)
+    order_1_master = models.ForeignKey(MasterInfo, verbose_name='订单1对应师傅', blank=True, on_delete=models.CASCADE, null=True, related_name='consumption_2_master_field1')
+    order_2_master = models.ForeignKey(MasterInfo, verbose_name='订单2对应师傅', blank=True, on_delete=models.CASCADE, null=True, related_name='consumption_2_master_field2')
+    order_3_master = models.ForeignKey(MasterInfo, verbose_name='订单3对应师傅', blank=True, on_delete=models.CASCADE, null=True, related_name='consumption_2_master_field3')
+    order_4_master = models.ForeignKey(MasterInfo, verbose_name='订单4对应师傅', blank=True, on_delete=models.CASCADE, null=True, related_name='consumption_2_master_field4')
+    order_5_master = models.ForeignKey(MasterInfo, verbose_name='订单5对应师傅', blank=True, on_delete=models.CASCADE, null=True, related_name='consumption_2_master_field5')
     mark = models.TextField("备注", max_length=400, default="这个人很懒，什么都没有留下")
     created_at = models.DateTimeField("添加日期", auto_now_add=True)
     updated_at = models.DateTimeField("更新日期", auto_now=datetime.datetime.now)
 
     def __str__(self):
-        return f"{self.id} - {self.customer}"
+        return f"{self.id} - {self.real_customer}"
 
     class Meta:
         ordering = ['-id']
@@ -205,7 +205,7 @@ class OptionRecord(models.Model):
 
 class RechargeRecord(models.Model):
     id = models.AutoField("ID", primary_key=True)
-    customer = models.ForeignKey(CustomerInfo, on_delete=models.CASCADE, null=True)
+    customer = models.ForeignKey(CustomerInfo, verbose_name='顾客', on_delete=models.CASCADE, null=True)
     amount = models.FloatField("金额", default=0)
     mark = models.TextField("备注", max_length=400, default="这个人很懒，什么都没有留下")
     created_at = models.DateTimeField("添加日期", auto_now_add=True)
