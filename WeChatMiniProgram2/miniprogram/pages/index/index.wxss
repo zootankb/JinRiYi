@@ -29,3 +29,102 @@ page {
   height: 50px;
   margin-top: 30px;
 }
+.hanzhengfang-img {
+  width: 100%;
+}
+.total_type {
+  margin-right: 15px;
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 108px;
+  border-width: 1px;
+  border-color: #ff9300;
+  border-style: solid;
+}
+.product {
+  padding: 10px;
+}
+.product-type {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  white-space: pre-wrap;
+}
+.product-item {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #e1dacc;
+  border-radius: 8px;
+  height: 136px;
+  padding: 8px;
+}
+.product-item-img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  border-radius: 8px;
+}
+.product-item-right {
+  float: right;
+  margin-left: 110px;
+  margin-top: -100px;
+}
+.product-item-title {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.product-item-sale-num {
+  font-size: 11px;
+  display: inline;
+  color: #5e5e5e;
+}
+.product-item-praise {
+  font-size: 9px;
+  display: inline;
+  color: #bd4b00;
+  margin-left: 10px;
+  background-color: #f6f7bb;
+  padding: 2px;
+  border-radius: 4px;
+}
+.product-item-discount {
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  color: #5e5e5e;
+  margin-top: 5px;
+}
+.product-item-price1 {
+  font-size: 10px;
+  display: inline;
+  color: #ff5252;
+  margin-top: 20px;
+}
+.product-item-price2 {
+  font-size: 12px;
+  display: inline;
+  color: #ff5252;
+  margin-top: 20px;
+}
+.product-item-price3 {
+  font-size: 16px;
+  display: inline;
+  color: #ff5252;
+  margin-top: 20px;
+  margin-right: 5px;
+}
+.product-item-btn-buy {
+  font-size: 14px;
+  color: white;
+  padding: 4px;
+  border-radius: 9px;
+  background-color: #fe6039;
+  margin-top: 4px;
+}

@@ -32,3 +32,13 @@ class UseType(models.IntegerChoices):
     once_money = 1, '金额'
     frequency = 2, '次卡'
 
+
+class ProductSubType(models.IntegerChoices):
+    anmotuina = 1, '推拿/按摩'
+    jingyouSPA = 2, '精油SPA'
+    caier = 3, '采耳'
+    aijiu = 4, '艾灸'
+    baguan = 5, '拔罐'
+    guasha = 6, '刮痧'
+    cika = 7, '次卡'
+

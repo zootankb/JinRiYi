@@ -20,15 +20,15 @@ class CustomerInfoAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'full_name', 'use_type', 'frequency_count', 'full_price', 'discount_number', 'final_price',
-                    'on_the_shelf', 'description', 'mark', 'created_at', 'updated_at']
-    search_fields = ['id', 'name', 'full_name', 'use_type', 'frequency_count', 'full_price', 'discount_number', 'final_price',
-                    'on_the_shelf', 'description', 'mark', 'created_at', 'updated_at']
-    list_filter = ['id', 'name', 'full_name', 'use_type', 'frequency_count', 'full_price', 'discount_number', 'final_price',
-                    'on_the_shelf', 'description', 'mark', 'created_at', 'updated_at']
+    list_display = ['id', 'name', 'full_name', 'bg_img', 'use_type', 'frequency_count', 'full_price', 'vip_price', 'discount_number', 'final_price',
+                    'exp_price', 'sub_type', 'on_the_shelf', 'description', 'mark', 'created_at', 'updated_at']
+    search_fields = ['id', 'name', 'full_name', 'bg_img', 'use_type', 'frequency_count', 'full_price', 'vip_price', 'discount_number', 'final_price',
+                     'exp_price', 'sub_type', 'on_the_shelf', 'description', 'mark', 'created_at', 'updated_at']
+    list_filter = ['id', 'name', 'full_name', 'bg_img', 'use_type', 'frequency_count', 'full_price', 'vip_price', 'discount_number', 'final_price',
+                   'exp_price', 'sub_type', 'on_the_shelf', 'description', 'mark', 'created_at', 'updated_at']
     ordering = ['-id', ]
-    fields = ['id', 'name', 'full_name', 'use_type', 'frequency_count', 'full_price', 'discount_number', 'final_price',
-                    'on_the_shelf', 'description', 'mark', 'created_at', 'updated_at']
+    fields = ['id', 'name', 'full_name', 'bg_img', 'use_type', 'frequency_count', 'full_price', 'vip_price', 'discount_number', 'final_price',
+              'exp_price', 'sub_type', 'on_the_shelf', 'description', 'mark', 'created_at', 'updated_at']
     readonly_fields = ['id', 'created_at', 'updated_at']
 
 
@@ -135,4 +135,14 @@ class RechargeRecordAdmin(admin.ModelAdmin):
     list_filter = ['id', 'customer', 'amount', 'mark', 'created_at', 'updated_at']
     ordering = ['-id', ]
     fields = ['id', 'customer', 'amount', 'mark', 'created_at', 'updated_at']
+    readonly_fields = ['id', 'created_at', 'updated_at']
+
+
+@admin.register(ListedInfo)
+class ListedInfoAdmin(admin.ModelAdmin):
+    list_display = ['id', 'product', 'listed_platform', 'exp_price', 'bug_jump_url', 'mark', 'created_at', 'updated_at']
+    search_fields = ['id', 'product', 'listed_platform', 'exp_price', 'bug_jump_url', 'mark', 'created_at', 'updated_at']
+    list_filter = ['id', 'product', 'listed_platform', 'exp_price', 'bug_jump_url', 'mark', 'created_at', 'updated_at']
+    ordering = ['-id', ]
+    fields = ['id', 'product', 'listed_platform', 'exp_price', 'bug_jump_url', 'mark', 'created_at', 'updated_at']
     readonly_fields = ['id', 'created_at', 'updated_at']

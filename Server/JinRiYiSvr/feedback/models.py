@@ -2,7 +2,7 @@ import datetime
 
 from django.db import models
 from django.contrib.auth.models import User
-from datatool.enum_data import PlatformChoice, StartLevel, Gender, UseType
+from datatool.enum_data import PlatformChoice, StartLevel, Gender, UseType, ProductSubType
 
 
 # Create your models here.
@@ -42,11 +42,15 @@ class Product(models.Model):
     id = models.AutoField("ID", primary_key=True)
     name = models.CharField("项目名字", max_length=40, blank=True)
     full_name = models.CharField("项目全称", max_length=80, blank=False)
+    bg_img = models.ImageField("项目展示图", upload_to="products/images/shop/products/", blank=True)
     use_type = models.PositiveSmallIntegerField("使用类型", choices=UseType, default=UseType.once_money)
     frequency_count = models.IntegerField("次卡：次数", default=0)
     full_price = models.FloatField("定价：元", default=0)
     discount_number = models.FloatField("折扣力度：0-1.0", default=1.0)
     final_price = models.FloatField("最终价格", default=0)
+    exp_price = models.FloatField("体验价", default=0)
+    vip_price = models.FloatField("VIP价格", default=0)
+    sub_type = models.PositiveSmallIntegerField("项目类型", choices=ProductSubType, default=ProductSubType.anmotuina)
     on_the_shelf = models.BooleanField("是否上架", default=True)
     description = models.TextField("介绍", max_length=400, default="无")
     mark = models.TextField("备注", max_length=400, default="这个人很懒，什么都没有留下")
@@ -60,6 +64,25 @@ class Product(models.Model):
         ordering = ['id']
         verbose_name = '项目表'
         verbose_name_plural = '项目表'
+
+
+class ListedInfo(models.Model):
+    id = models.AutoField("ID", primary_key=True)
+    product = models.ForeignKey(Product, verbose_name='项目', on_delete=models.CASCADE, null=True)
+    listed_platform = models.PositiveSmallIntegerField("上架平台", choices=PlatformChoice, default=PlatformChoice.meituan)
+    exp_price = models.FloatField("体验价", default=0)
+    bug_jump_url = models.CharField("购买跳转链接", blank=True, max_length=500)
+    mark = models.TextField("备注", max_length=400, default="这个人很懒，什么都没有留下")
+    created_at = models.DateTimeField("添加日期", auto_now_add=True)
+    updated_at = models.DateTimeField("更新日期", auto_now=datetime.datetime.now)
+
+    def __str__(self):
+        return f"{self.product.name}"  # 在显示中包含id
+
+    class Meta:
+        ordering = ['id']
+        verbose_name = '平台上架表'
+        verbose_name_plural = '平台上架表'
 
 
 class MasterInfo(models.Model):
@@ -217,4 +240,22 @@ class RechargeRecord(models.Model):
     class Meta:
         ordering = ['-id']
         verbose_name = '充值记录表'
+        verbose_name_plural = '充值记录表'
+
+
+class HotProductInfo(models.Model):
+    id = models.AutoField("ID", primary_key=True)
+    title = models.CharField("标题", max_length=2000)
+    img_url = models.CharField("图片地址", max_length=2000)
+    jump_url = models.CharField("跳转地址", max_length=2000)
+    mark = models.TextField("备注", max_length=400, default="这个人很懒，什么都没有留下")
+    created_at = models.DateTimeField("添加日期", auto_now_add=True)
+    updated_at = models.DateTimeField("更新日期", auto_now=datetime.datetime.now)
+
+    def __str__(self):
+        return f"{self.title}"
+
+    class Meta:
+        ordering = ['-id']
+        verbose_name = '热门项目表'
         verbose_name_plural = '充值记录表'
