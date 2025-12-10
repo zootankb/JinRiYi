@@ -41,4 +41,6 @@ class ProductSubType(models.IntegerChoices):
     baguan = 5, '拔罐'
     guasha = 6, '刮痧'
     cika = 7, '次卡'
+    hangzheng = 8, '汗蒸'
+    tiaoli = 9, '调理'
 
