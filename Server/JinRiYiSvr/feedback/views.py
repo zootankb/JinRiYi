@@ -203,8 +203,8 @@ def get_main_data(request):
         })
     # 滑动图片的地址
     swiper_data = [
-        IPAddr + "/media/products/images/shop/products/hanzhengfang.jpg",
-        IPAddr + "/media/products/images/shop/products/hanzhengfang.jpg",
+        IPAddr + "/static/products/images/shop/products/hanzhengfang.jpg",
+        IPAddr + "/static/products/images/shop/products/hanzhengfang.jpg",
     ]
     res_data = {
         "swiper_data": swiper_data,
