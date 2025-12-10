@@ -15,4 +15,5 @@ urlpatterns = [
     path('get_hot_products/', get_hot_products, name='get_hot_products'),
     path('get_products/', get_products, name='get_products'),
     path('get_main_data/', get_main_data, name='get_main_data'),
+    path('download_image/<path:filename>/', download_image, name='download_image'),
 ]

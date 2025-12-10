@@ -23,7 +23,7 @@ IPAddr = socket.gethostbyname(hostname)
 if DEBUG:
     IPAddr = "http://" + IPAddr + ":8000"
 else:
-    IPAddr = "https://" + IPAddr
+    IPAddr = "https://www.jinriyi.top"
 
 # Create your views here.
 
