@@ -31,6 +31,7 @@
         <block wx:for="{{item.detail_items}}">
           <view class="product-item">
             <image src="{{item.img_url}}" class="product-item-img" />
+            <!-- <image src="https://www.jinriyi.top/static/spa.png" class="product-item-img" /> -->
             <view class="product-item-right">
               <label class="product-item-title">{{item.title}}</label>
               <label class="product-item-sale-num">{{item.sale_info}}</label>

@@ -13,6 +13,10 @@ from feedback.models import CustomerInfo, VerificationCode, Product, Feedback, H
 import socket
 from JinRiYiSvr.settings import DEBUG
 
+from django.http import FileResponse, Http404
+from django.conf import settings
+import os
+
 hostname = socket.gethostname()
 IPAddr = socket.gethostbyname(hostname)
 
@@ -176,7 +180,7 @@ def get_main_data(request):
             sub_type_proj_arr = []
             products_dic[sub_type] = sub_type_proj_arr
         proj_data = {
-            "img_url": IPAddr + product.bg_img.url,
+            "img_url": IPAddr + product.bg_img.url.replace("media", "static"),
             "title": product.full_name,
             "sale_info": "月销100+",
             "praise_info": "100+觉得很赞",
@@ -220,3 +224,40 @@ def get_sub_type_names(sub_type):
     for choice in ProductSubType:
         if choice.value == sub_type:
             return choice.label
+
+
+def download_image(request, filename):
+    print("文件名字：" + filename)
+    # 获取文件路径
+    file_path = os.path.join(settings.MEDIA_ROOT,  "products/images/shop/products", filename)
+    print("文件路径：" + file_path)
+    # 检查文件是否存在
+    if os.path.exists(file_path):
+        # 以二进制模式打开文件
+        file = open(file_path, 'rb')
+
+        # 获取文件扩展名
+        _, ext = os.path.splitext(filename)
+
+        # 设置Content-Type
+        content_type = 'application/octet-stream'
+        if ext.lower() in ['.jpg', '.jpeg']:
+            content_type = 'image/jpeg'
+        elif ext.lower() == '.png':
+            content_type = 'image/png'
+        elif ext.lower() == '.gif':
+            content_type = 'image/gif'
+
+        # 创建FileResponse
+        response = FileResponse(file, content_type=content_type)
+
+        # 设置Content-Disposition实现下载（而不是预览）
+        response['Content-Disposition'] = f'attachment; filename="{filename}"'
+
+        # 或者设置为预览模式
+        # response['Content-Disposition'] = f'inline; filename="{filename}"'
+
+        return response
+    else:
+        raise Http404("文件不存在")
+

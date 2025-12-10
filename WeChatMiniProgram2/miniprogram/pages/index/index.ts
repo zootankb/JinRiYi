@@ -17,8 +17,8 @@ Page({
     radio_bg_color_selected: "#ff9300",
     radio_font_color_selected: "white",
     swiper_data: [
-      "../../images/shop/products/spa.png",
-      "../../images/shop/products/spa.png",
+      "../../images/shop/products/spa.jpg",
+      "../../images/shop/products/spa.jpg",
     ],
     product_items: [
       {

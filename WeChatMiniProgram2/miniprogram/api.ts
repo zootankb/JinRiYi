@@ -1,6 +1,6 @@
 // api.ts
-// const ROOT = "http://www.jinriyi.top";
-const ROOT = "http://192.168.1.6:8000";
+const ROOT = "https://www.jinriyi.top";
+// const ROOT = "http://192.168.1.6:8000";
 
 function GetFullUrl (extUrl: string) {
   return ROOT + extUrl;
