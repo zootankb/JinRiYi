@@ -1,4 +1,5 @@
 import json
+import random
 
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
@@ -261,3 +262,27 @@ def download_image(request, filename):
     else:
         raise Http404("文件不存在")
 
+
+@require_GET
+def get_dialog_ad(request):
+    res_data = None
+    tar_res_path = os.path.join(settings.MEDIA_ROOT, "dialog")
+    print("get_dialog_ad: tar_res_path = ", tar_res_path)
+    if os.path.exists(tar_res_path):
+        print("get_dialog_ad: exit ", tar_res_path)
+        image_path = os.path.join(tar_res_path, "image")
+        video_path = os.path.join(tar_res_path, "video")
+        tar_paths = [image_path, video_path]
+        is_file_paths = [True, False]
+        for tar_path in tar_paths:
+            if not os.path.exists(tar_path):
+                os.makedirs(tar_path)
+        rd_index = random.randint(0, len(tar_paths))
+        child_files = os.listdir(tar_paths[rd_index])
+        rd_file = os.path.join(tar_paths[rd_index], random.choice(child_files))
+        res_data = {
+            "is_file": is_file_paths[rd_index],
+            "res_path": rd_file,
+        }
+    print("get_dialog_ad: res_data = ", res_data)
+    return JsonResponse(res_data, safe=False, json_dumps_params={'ensure_ascii': False})

@@ -17,15 +17,15 @@ Page({
     radio_bg_color_selected: "#ff9300",
     radio_font_color_selected: "white",
     swiper_data: [
-      "../../images/shop/products/spa.jpg",
-      "../../images/shop/products/spa.jpg",
+      "../../media/images/shop/products/spa.jpg",
+      "../../media/images/shop/products/spa.jpg",
     ],
     product_items: [
       {
         product_type: 1,
         detail_items: [
           {
-            img_url:  "../../images/shop/products/spa.png",
+            img_url:  "../../media/images/shop/products/spa.png",
             title: "采耳30分钟|【店长采耳】逸静采耳/清爽放松",
             sale_info: "月销200+",
             praise_info: "200+觉得很赞",
@@ -48,7 +48,12 @@ Page({
         ]
       }
     ],
-    show_product_items: Array<any>()
+    show_product_items: Array<any>(),
+    showDialog: false,
+    showDialogImage: false,
+    showDialogImageUrl: "",
+    showDialogVideo: false,
+    showDialogVideoUrl: "",
   },
 
   /**
@@ -66,6 +71,7 @@ Page({
     //   url: "/pages/feedback/feedback"
     // });
     this.get_main_data();
+    this.getDialogAd();
   },
 
   /**
@@ -330,6 +336,44 @@ Page({
         show_product_items: showItems
       })
     }
+  },
+  toggleDialog() {
+    this.setData({
+      showDialog: false
+    });
+  },
+  getDialogAd() {
+    let that = this;
+    wx.request({
+      url: API.DialogAD, // 接口地址
+      method: 'GET', // 请求方法
+      header: {
+        'content-type': 'application/json' // 设置请求头
+      },
+      dataType: "json",
+      success(res) {
+        const data = res.data;
+        console.log("请求广告成功主体数据：", data);
+        let adData = data as DialogAd;
+        if (adData.is_file) {
+          that.setData({
+            showDialog:  true,
+            showDialogImage: true,
+            showDialogImageUrl: adData.res_path
+          });
+        } else {
+          that.setData({
+            showDialog:  true,
+            showDialogVideo: true,
+            showDialogVideoUrl: adData.res_path
+          });
+        }
+      },
+      fail(err) {
+        that.setData({
+          showDialog: false
+        })
+      }
+    });
   }
-
 })

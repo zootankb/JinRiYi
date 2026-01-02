@@ -24,7 +24,7 @@
     </view>
   </scroll-view>
   <view class="product">
-    <view>
+    <view style="height: -375rpx; display: block; box-sizing: content-box">
       <!-- <block wx:for="{{product_items}}"> -->
       <block wx:for="{{show_product_items}}">
         <text class="product-type"> {{radio_items[item.product_type].name}}</text>
@@ -46,15 +46,29 @@
               <label class="product-item-price1">VIP</label>
               <label class="product-item-price2">￥</label>
               <label class="product-item-price3">{{item.vip_price}}</label>
-              <!-- <view style="display:flex;justify-content: flex-end;align-items: center;">
-                <label class="product-item-btn-buy">美团抢购</label>
-              </view> -->
+              <view style="display:flex;justify-content: flex-end;align-items: center;">
+                <label class="product-item-btn-buy">服务反馈</label>
+              </view>
             </view>
           </view>
         </block>
       </block>
     </view>
   </view>
+  <block wx:if="{{showDialog}}">
+    <view class="zan-dialog {{ showDialog ? 'zan-dialog-show' : '' }}" >
+      <view class="zan-dialog-mask" bindtap="toggleDialog" />
+      <view class="zan-dialog-container">
+        <!-- 养生小技巧，图片或者视频，服务器随机一个 -->
+        <block wx:if="{{showDialogImage}}">
+          <image class="zan-dialog-show-image" mode="scaleToFill" src="{{showDialogImageUrl}}" />
+        </block>
+        <block wx:elif="{{showDialogVideo}}">
+          <video src="{{showDialogVideoUrl}}" autoplay="true" controls = "false" class="zan-dialog-show-video" loop="true" show-play-btn="false" show-center-play-btn="false"/>
+        </block>
+      </view>
+    </view>
+  </block>
     <!-- <view class="main-content">
     <text>欢迎来到今日宜推拿馆，欢迎您的反馈和建议！</text>
     <button bindtap="onToWriteFeedback" class="btn-ver">填写反馈和建议</button>

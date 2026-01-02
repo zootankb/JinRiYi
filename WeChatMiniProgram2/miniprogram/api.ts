@@ -1,6 +1,6 @@
 // api.ts
 const ROOT = "https://www.jinriyi.top";
-// const ROOT = "http://192.168.1.6:8000";
+// const ROOT = "http://192.168.1.4:8000";
 
 function GetFullUrl (extUrl: string) {
   return ROOT + extUrl;
@@ -12,6 +12,7 @@ module.exports = {
   StartFeedback: GetFullUrl('/start_feedback/'),
   GetVersionCode: GetFullUrl('/get_verification_code/'),
   CheckVerificationValid: GetFullUrl('/check_verification_valid/'),
+  DialogAD: GetFullUrl("/get_dialog_ad/"),
 }
 
 interface ProjData {
@@ -35,4 +36,9 @@ interface TypeProjData {
 interface MainData {
   swiper_data: string[];
   product_items: TypeProjData[];
+}
+
+interface DialogAd {
+  is_file: boolean,
+  res_path: string
 }

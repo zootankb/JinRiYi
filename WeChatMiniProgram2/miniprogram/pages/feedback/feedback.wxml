@@ -51,7 +51,7 @@
       </view>
       <view class="star-content-line">
         <view class="star-content-title">
-          <image class="star-content-image" src="../../images/star_title.png" mode="aspectFit"></image>
+          <image class="star-content-image" src="../../media/images/star_title.png" mode="aspectFit"></image>
           <text class="star-content-title-text">服务流程</text>
         </view>
         <image class="star-content-cell3" src="{{starImgPaths_StarSvrPro0}}" mode="aspectFit" bindtap="starSvrPro0"></image>
@@ -61,7 +61,7 @@
       </view>
       <view class="star-content-line">
         <view class="star-content-title">
-          <image class="star-content-image" src="../../images/star_title.png" mode="aspectFit"></image>
+          <image class="star-content-image" src="../../media/images/star_title.png" mode="aspectFit"></image>
           <text class="star-content-title-text">技师手法</text>
         </view>
         <image class="star-content-cell3" src="{{starImgPaths_StarTecPro0}}" mode="aspectFit" bindtap="starTecPro0"></image>
@@ -71,7 +71,7 @@
       </view>
       <view class="star-content-line">
         <view class="star-content-title">
-          <image class="star-content-image" src="../../images/star_title.png" mode="aspectFit"></image>
+          <image class="star-content-image" src="../../media/images/star_title.png" mode="aspectFit"></image>
           <text class="star-content-title-text">环境卫生</text>
         </view>
         <image class="star-content-cell3" src="{{starImgPaths_StarEnvPro0}}" mode="aspectFit" bindtap="starEnvPro0"></image>

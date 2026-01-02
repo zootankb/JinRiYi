@@ -16,18 +16,18 @@ Component({
     projIdArr: [],
     selectedProjIdx: -1,
     thankDesc: "&emsp;&emsp;我们珍惜每一条评价，用心对待每一份的信任和选择，我们继续努力加油，期待您的常来！",
-    starImgPaths_StarSvrPro0: "../../images/small/small_level_0_normal.png",
-    starImgPaths_StarSvrPro1: "../../images/small/small_level_1_normal.png",
-    starImgPaths_StarSvrPro2: "../../images/small/small_level_2_normal.png",
-    starImgPaths_StarSvrPro3: "../../images/small/small_level_3_selected.png",
-    starImgPaths_StarTecPro0: "../../images/small/small_level_0_normal.png",
-    starImgPaths_StarTecPro1: "../../images/small/small_level_1_normal.png",
-    starImgPaths_StarTecPro2: "../../images/small/small_level_2_normal.png",
-    starImgPaths_StarTecPro3: "../../images/small/small_level_3_selected.png",
-    starImgPaths_StarEnvPro0: "../../images/small/small_level_0_normal.png",
-    starImgPaths_StarEnvPro1: "../../images/small/small_level_1_normal.png",
-    starImgPaths_StarEnvPro2: "../../images/small/small_level_2_normal.png",
-    starImgPaths_StarEnvPro3: "../../images/small/small_level_3_selected.png",
+    starImgPaths_StarSvrPro0: "../../media/images/small/small_level_0_normal.png",
+    starImgPaths_StarSvrPro1: "../../media/images/small/small_level_1_normal.png",
+    starImgPaths_StarSvrPro2: "../../media/images/small/small_level_2_normal.png",
+    starImgPaths_StarSvrPro3: "../../media/images/small/small_level_3_selected.png",
+    starImgPaths_StarTecPro0: "../../media/images/small/small_level_0_normal.png",
+    starImgPaths_StarTecPro1: "../../media/images/small/small_level_1_normal.png",
+    starImgPaths_StarTecPro2: "../../media/images/small/small_level_2_normal.png",
+    starImgPaths_StarTecPro3: "../../media/images/small/small_level_3_selected.png",
+    starImgPaths_StarEnvPro0: "../../media/images/small/small_level_0_normal.png",
+    starImgPaths_StarEnvPro1: "../../media/images/small/small_level_1_normal.png",
+    starImgPaths_StarEnvPro2: "../../media/images/small/small_level_2_normal.png",
+    starImgPaths_StarEnvPro3: "../../media/images/small/small_level_3_selected.png",
     selectStarSvrNum: 4,
     selectStarTecNum: 4,
     selectStarEnvNum: 4,
@@ -134,120 +134,120 @@ Component({
       this.data.selectStarSvrNum = 1;
       console.log(this.data.selectStarSvrNum);
       this.setData({
-        starImgPaths_StarSvrPro0: "../../images/small/small_level_0_selected.png",
-        starImgPaths_StarSvrPro1: "../../images/small/small_level_1_normal.png",
-        starImgPaths_StarSvrPro2: "../../images/small/small_level_2_normal.png",
-        starImgPaths_StarSvrPro3: "../../images/small/small_level_3_normal.png"
+        starImgPaths_StarSvrPro0: "../../media/images/small/small_level_0_selected.png",
+        starImgPaths_StarSvrPro1: "../../media/images/small/small_level_1_normal.png",
+        starImgPaths_StarSvrPro2: "../../media/images/small/small_level_2_normal.png",
+        starImgPaths_StarSvrPro3: "../../media/images/small/small_level_3_normal.png"
       });
     },
     starSvrPro1() {
       this.data.selectStarSvrNum = 2;
       console.log(this.data.selectStarSvrNum);
       this.setData({
-        starImgPaths_StarSvrPro0: "../../images/small/small_level_0_normal.png",
-        starImgPaths_StarSvrPro1: "../../images/small/small_level_1_selected.png",
-        starImgPaths_StarSvrPro2: "../../images/small/small_level_2_normal.png",
-        starImgPaths_StarSvrPro3: "../../images/small/small_level_3_normal.png"
+        starImgPaths_StarSvrPro0: "../../media/images/small/small_level_0_normal.png",
+        starImgPaths_StarSvrPro1: "../../media/images/small/small_level_1_selected.png",
+        starImgPaths_StarSvrPro2: "../../media/images/small/small_level_2_normal.png",
+        starImgPaths_StarSvrPro3: "../../media/images/small/small_level_3_normal.png"
       });
     },
     starSvrPro2() {
       this.data.selectStarSvrNum = 3;
       console.log(this.data.selectStarSvrNum);
       this.setData({
-        starImgPaths_StarSvrPro0: "../../images/small/small_level_0_normal.png",
-        starImgPaths_StarSvrPro1: "../../images/small/small_level_1_normal.png",
-        starImgPaths_StarSvrPro2: "../../images/small/small_level_2_selected.png",
-        starImgPaths_StarSvrPro3: "../../images/small/small_level_3_normal.png"
+        starImgPaths_StarSvrPro0: "../../media/images/small/small_level_0_normal.png",
+        starImgPaths_StarSvrPro1: "../../media/images/small/small_level_1_normal.png",
+        starImgPaths_StarSvrPro2: "../../media/images/small/small_level_2_selected.png",
+        starImgPaths_StarSvrPro3: "../../media/images/small/small_level_3_normal.png"
       });
     },
     starSvrPro3() {
       this.data.selectStarSvrNum = 4;
       console.log(this.data.selectStarSvrNum);
       this.setData({
-        starImgPaths_StarSvrPro0: "../../images/small/small_level_0_normal.png",
-        starImgPaths_StarSvrPro1: "../../images/small/small_level_1_normal.png",
-        starImgPaths_StarSvrPro2: "../../images/small/small_level_2_normal.png",
-        starImgPaths_StarSvrPro3: "../../images/small/small_level_3_selected.png"
+        starImgPaths_StarSvrPro0: "../../media/images/small/small_level_0_normal.png",
+        starImgPaths_StarSvrPro1: "../../media/images/small/small_level_1_normal.png",
+        starImgPaths_StarSvrPro2: "../../media/images/small/small_level_2_normal.png",
+        starImgPaths_StarSvrPro3: "../../media/images/small/small_level_3_selected.png"
       });
     },
     starTecPro0() {
       this.data.selectStarTecNum = 1;
       console.log(this.data.selectStarTecNum);
       this.setData({
-        starImgPaths_StarTecPro0: "../../images/small/small_level_0_selected.png",
-        starImgPaths_StarTecPro1: "../../images/small/small_level_1_normal.png",
-        starImgPaths_StarTecPro2: "../../images/small/small_level_2_normal.png",
-        starImgPaths_StarTecPro3: "../../images/small/small_level_3_normal.png"
+        starImgPaths_StarTecPro0: "../../media/images/small/small_level_0_selected.png",
+        starImgPaths_StarTecPro1: "../../media/images/small/small_level_1_normal.png",
+        starImgPaths_StarTecPro2: "../../media/images/small/small_level_2_normal.png",
+        starImgPaths_StarTecPro3: "../../media/images/small/small_level_3_normal.png"
       });
     },
     starTecPro1() {
       this.data.selectStarTecNum = 2;
       console.log(this.data.selectStarTecNum);
       this.setData({
-        starImgPaths_StarTecPro0: "../../images/small/small_level_0_normal.png",
-        starImgPaths_StarTecPro1: "../../images/small/small_level_1_selected.png",
-        starImgPaths_StarTecPro2: "../../images/small/small_level_2_normal.png",
-        starImgPaths_StarTecPro3: "../../images/small/small_level_3_normal.png"
+        starImgPaths_StarTecPro0: "../../media/images/small/small_level_0_normal.png",
+        starImgPaths_StarTecPro1: "../../media/images/small/small_level_1_selected.png",
+        starImgPaths_StarTecPro2: "../../media/images/small/small_level_2_normal.png",
+        starImgPaths_StarTecPro3: "../../media/images/small/small_level_3_normal.png"
       });
     },
     starTecPro2() {
       this.data.selectStarTecNum = 3;
       console.log(this.data.selectStarTecNum);
       this.setData({
-        starImgPaths_StarTecPro0: "../../images/small/small_level_0_normal.png",
-        starImgPaths_StarTecPro1: "../../images/small/small_level_1_normal.png",
-        starImgPaths_StarTecPro2: "../../images/small/small_level_2_selected.png",
-        starImgPaths_StarTecPro3: "../../images/small/small_level_3_normal.png"
+        starImgPaths_StarTecPro0: "../../media/images/small/small_level_0_normal.png",
+        starImgPaths_StarTecPro1: "../../media/images/small/small_level_1_normal.png",
+        starImgPaths_StarTecPro2: "../../media/images/small/small_level_2_selected.png",
+        starImgPaths_StarTecPro3: "../../media/images/small/small_level_3_normal.png"
       });
     },
     starTecPro3() {
       this.data.selectStarTecNum = 4;
       console.log(this.data.selectStarTecNum);
       this.setData({
-        starImgPaths_StarTecPro0: "../../images/small/small_level_0_normal.png",
-        starImgPaths_StarTecPro1: "../../images/small/small_level_1_normal.png",
-        starImgPaths_StarTecPro2: "../../images/small/small_level_2_normal.png",
-        starImgPaths_StarTecPro3: "../../images/small/small_level_3_selected.png"
+        starImgPaths_StarTecPro0: "../../media/images/small/small_level_0_normal.png",
+        starImgPaths_StarTecPro1: "../../media/images/small/small_level_1_normal.png",
+        starImgPaths_StarTecPro2: "../../media/images/small/small_level_2_normal.png",
+        starImgPaths_StarTecPro3: "../../media/images/small/small_level_3_selected.png"
       });
     },
     starEnvPro0() {
       this.data.selectTecEnvNum = 1;
       console.log(this.data.selectTecEnvNum);
       this.setData({
-        starImgPaths_StarEnvPro0: "../../images/small/small_level_0_selected.png",
-        starImgPaths_StarEnvPro1: "../../images/small/small_level_1_normal.png",
-        starImgPaths_StarEnvPro2: "../../images/small/small_level_2_normal.png",
-        starImgPaths_StarEnvPro3: "../../images/small/small_level_3_normal.png"
+        starImgPaths_StarEnvPro0: "../../media/images/small/small_level_0_selected.png",
+        starImgPaths_StarEnvPro1: "../../media/images/small/small_level_1_normal.png",
+        starImgPaths_StarEnvPro2: "../../media/images/small/small_level_2_normal.png",
+        starImgPaths_StarEnvPro3: "../../media/images/small/small_level_3_normal.png"
       });
     },
     starEnvPro1() {
       this.data.selectTecEnvNum = 2;
       console.log(this.data.selectTecEnvNum);
       this.setData({
-        starImgPaths_StarEnvPro0: "../../images/small/small_level_0_normal.png",
-        starImgPaths_StarEnvPro1: "../../images/small/small_level_1_selected.png",
-        starImgPaths_StarEnvPro2: "../../images/small/small_level_2_normal.png",
-        starImgPaths_StarEnvPro3: "../../images/small/small_level_3_normal.png"
+        starImgPaths_StarEnvPro0: "../../media/images/small/small_level_0_normal.png",
+        starImgPaths_StarEnvPro1: "../../media/images/small/small_level_1_selected.png",
+        starImgPaths_StarEnvPro2: "../../media/images/small/small_level_2_normal.png",
+        starImgPaths_StarEnvPro3: "../../media/images/small/small_level_3_normal.png"
       });
     },
     starEnvPro2() {
       this.data.selectTecEnvNum = 3;
       console.log(this.data.selectTecEnvNum);
       this.setData({
-        starImgPaths_StarEnvPro0: "../../images/small/small_level_0_normal.png",
-        starImgPaths_StarEnvPro1: "../../images/small/small_level_1_normal.png",
-        starImgPaths_StarEnvPro2: "../../images/small/small_level_2_selected.png",
-        starImgPaths_StarEnvPro3: "../../images/small/small_level_3_normal.png"
+        starImgPaths_StarEnvPro0: "../../media/images/small/small_level_0_normal.png",
+        starImgPaths_StarEnvPro1: "../../media/images/small/small_level_1_normal.png",
+        starImgPaths_StarEnvPro2: "../../media/images/small/small_level_2_selected.png",
+        starImgPaths_StarEnvPro3: "../../media/images/small/small_level_3_normal.png"
       });
     },
     starEnvPro3() {
       this.data.selectTecEnvNum = 4;
       console.log(this.data.selectTecEnvNum);
       this.setData({
-        starImgPaths_StarEnvPro0: "../../images/small/small_level_0_normal.png",
-        starImgPaths_StarEnvPro1: "../../images/small/small_level_1_normal.png",
-        starImgPaths_StarEnvPro2: "../../images/small/small_level_2_normal.png",
-        starImgPaths_StarEnvPro3: "../../images/small/small_level_3_selected.png"
+        starImgPaths_StarEnvPro0: "../../media/images/small/small_level_0_normal.png",
+        starImgPaths_StarEnvPro1: "../../media/images/small/small_level_1_normal.png",
+        starImgPaths_StarEnvPro2: "../../media/images/small/small_level_2_normal.png",
+        starImgPaths_StarEnvPro3: "../../media/images/small/small_level_3_selected.png"
       });
     },
     onCommit() {
